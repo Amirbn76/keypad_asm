@@ -62,6 +62,7 @@ nop
 //-----------------------------
      //Dast nazan namosan!
 print:  //prints {v3,v2,v1,v0}	   
+
 addi  sp,sp,-4
 sw    ra,0(sp)
 la    t0,TRISB
@@ -77,7 +78,7 @@ la    t0,LATB
 sw    s0,0(t0)
 jal   delay
 nop
-//Digit1
+/*//Digit1
 sll	a1,v1,2    
 addu  t0,a1,sp
 addiu t0,t0,4
@@ -87,7 +88,6 @@ la    t0,LATB
 sw    s1,0(t0)
 jal	delay
 nop    
-/*
     //Digit2
 sll	a2,v2,2    
 addu  t0,a2,sp
@@ -98,8 +98,6 @@ la    t0,LATB
 sw    s2,0(t0)
 jal	delay
 nop
-*/	
-/*
 //Digit3
 sll	a3,v3,2    
 addu	t0,a3,sp
@@ -157,7 +155,7 @@ B12:
       nop
           la  t0,PORTA
           lw  t0,0(t0)
-          beq t0,zero,loop
+          //beq t0,zero,loop
           nop
           
           addiu t1,zero,0x0001
@@ -187,7 +185,7 @@ B13:
       
           la  t0,PORTA
           lw  t0,0(t0)
-          beq t0,zero,loop
+          //beq t0,zero,loop
           nop
          
           addiu t1,zero,0x0001
@@ -220,7 +218,7 @@ B14:
       nop
 	  la  t0,PORTA
           lw  t0,0(t0)
-          beq t0,zero,loop
+          //beq t0,zero,loop
           nop
          
           addiu t1,zero,0x0001
@@ -253,7 +251,7 @@ B15:
       nop
 	  la  t0,PORTA
           lw  t0,0(t0)
-          beq t0,zero,loop
+          //beq t0,zero,loop
           nop
           
           addiu t1,zero,0x0001
@@ -279,7 +277,7 @@ B15:
           jr ra
       nop
   B12_A0:
-      addiu   v0,zero,0x0005
+      addiu   v0,zero,0x0001
       jr  ra
       nop
   B12_A1:
